@@ -209,7 +209,7 @@ const CryptoDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col w-[55%] h-full pl-3 bg-green'>
+                    <div className='flex flex-col w-[55%] h-full pl-3'>
                         <Chart id={data.id} />
                     </div>
                 </div>
