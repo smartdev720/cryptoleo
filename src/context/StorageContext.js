@@ -60,7 +60,7 @@ export const StorageProvider = ({children}) => {
     useLayoutEffect(() => {
         let isThere = JSON.parse(localStorage.getItem("coins")) || false
 
-        if(isThere) {
+        if(!isThere) {
             //set the localstorage with empty array
             localStorage.setItem("coins", JSON.stringify([]))
         }else{
