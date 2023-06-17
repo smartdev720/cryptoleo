@@ -17,16 +17,17 @@ export const CryptoProvider = ({children}) => {
     const [perPage, setPerPage] = useState(10)
 
     const getCryptoData = async () => {
+        setCryptoData()
+        setTotalPages(9220)
+        // try{
 
-        try{
-
-            const data = await fetch(`https://api.coingecko.com/api/v3/coins/list`
-            ).then(res => res.json()).then(json => json) 
+        //     const data = await fetch(`https://api.coingecko.com/api/v3/coins/list`
+        //     ).then(res => res.json()).then(json => json) 
             
-            setTotalPages(data.length)
-        }catch(error){
-            console.log(error)
-        }
+        //     setTotalPages(data.length)
+        // }catch(error){
+        //     console.log(error)
+        // }
 
         try{
 
@@ -40,7 +41,7 @@ export const CryptoProvider = ({children}) => {
     }
 
     const getCoinData = async (coinId) => {
-
+        setCoinData()
         try{
 
             const data = await fetch(`
